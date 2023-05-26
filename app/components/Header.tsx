@@ -26,12 +26,12 @@ const Header = () => {
       <div
         className="
           absolute
-          left-[200px]
-          right-[200px]
+          left-0
+          right-0
           top-0
           h-full
           z-10
-          bg-[rgba(15,132,250,.1)]
+          bg-[rgba(15,132,250,.3)]
         "
       />
       <div

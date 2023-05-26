@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+  font-family: "Iran-sans-xv";
+  src: url(/public/fonts/IRANSansXV.woff);
+} */
+
 :root {
   --blue-100: #e8f1fa;
   --blue-200: #c2e0ff;

@@ -1,7 +1,16 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+
+const iranSansXV = localFont({
+  src: "../public/fonts/IRANSansXV.woff",
+  variable: "--font-iran-sans",
+});
+
+const iranSansNum = localFont({
+  src: "../public/fonts/IRANSansWeb(FaNum).ttf",
+  variable: "--font-iran-num",
+});
 
 export const metadata = {
   title: "بلیط هواپیما",
@@ -15,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${iranSansXV.className} ${iranSansNum.className}`}>
+        {children}
+      </body>
     </html>
   );
 }
