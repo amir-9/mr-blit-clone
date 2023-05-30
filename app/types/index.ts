@@ -9,3 +9,19 @@ export type MobileOrEmailStateType = {
   mobileOrEmail: MobileOrEmailType;
   setMobileOrEmail: (mobileOrEmail: MobileOrEmailType) => void;
 };
+
+export type VehicleType = "flight" | "train" | "bus" | "taxi" | "ship";
+export type VehicleStateType = {
+  vehicle: VehicleType;
+  setVehicle: (vehicle: VehicleType) => void;
+};
+
+export type DataType = {
+  step: StepType,
+  mobileOrEmail: MobileOrEmailType,
+  vehicle: VehicleType
+}
+export type DataStateType = {
+  data: DataType;
+  setData: (data: DataType) => void;
+};
