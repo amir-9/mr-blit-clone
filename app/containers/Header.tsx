@@ -8,6 +8,7 @@ const Header = () => {
         h-[300px] 
         w-[100%]
         bg-no-repeat 
+        bg-center
         relative
       "
     >
