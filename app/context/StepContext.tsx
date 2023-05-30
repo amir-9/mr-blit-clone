@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, createContext, PropsWithChildren } from "react";
 
