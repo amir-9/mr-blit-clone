@@ -17,11 +17,23 @@ export type VehicleStateType = {
 };
 
 export type DataType = {
-  step: StepType,
-  mobileOrEmail: MobileOrEmailType,
-  vehicle: VehicleType
-}
+  step: StepType;
+  mobileOrEmail: MobileOrEmailType;
+  vehicle: VehicleType;
+};
 export type DataStateType = {
   data: DataType;
   setData: (data: DataType) => void;
+};
+
+// ///////////////////
+
+export type StateType = {
+  service: "ship" | "taxi" | "bus" | "train" | "travelBag" | "hotel" | "flight";
+};
+
+export type NavItemType = {
+  title: string;
+  navbarIcon: any;
+  state: StateType["service"];
 };
