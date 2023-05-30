@@ -1,6 +1,10 @@
 import localFont from "next/font/local";
+import type { AppProps } from "next/app";
 
 import "./globals.css";
+import AuthContext from "./context/AuthContext";
+import { StepProvider } from "@/app/context/StepContext";
+import { MobileOrEmailProvider } from "@/app/context/MobileOrEmailContext";
 
 const iranSansXV = localFont({
   src: "../public/fonts/IRANSansXV.woff",
@@ -25,7 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${iranSansXV.className} ${iranSansNum.className}`}>
-        {children}
+        <AuthContext>
+          <StepProvider>
+            <MobileOrEmailProvider>{children}</MobileOrEmailProvider>
+          </StepProvider>
+        </AuthContext>
       </body>
     </html>
   );
