@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 import NavbarIcons from "../components/icons/NavbarIcons";
-import { navbarItems } from "@/app/constants/constants";
+import { navbarItems } from "@/app/constants";
 import DropDown from "../components/DropDown";
 import LoginModal from "../components/modals/LoginModal";
 import useStep from "../hooks/useStep";

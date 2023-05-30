@@ -86,3 +86,7 @@
 .header-right {
   background: linear-gradient(90deg, rgba(15, 132, 250, 0), #0f84fa 84.37%);
 }
+
+.header-bt {
+  background: linear-gradient(0deg, #0f84fa -0.02%, #c2e0ff 66.02%);
+}
