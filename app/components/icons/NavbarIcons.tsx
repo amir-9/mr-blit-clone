@@ -1,12 +1,21 @@
 interface NavbarIconsProps {
-  name: string;
+  name:
+    | "user"
+    | "ticket"
+    | "angleDown"
+    | "planeDeparture"
+    | "hotel"
+    | "suitcaseRolling"
+    | "train"
+    | "bus"
+    | "car";
   fill?: string;
   classNames?: string;
 }
 
 const NavbarIcons: React.FC<NavbarIconsProps> = ({
   name,
-  fill = "#0f84fa",
+  fill = "#fff",
   classNames = " ",
 }) => {
   if (name === "user")

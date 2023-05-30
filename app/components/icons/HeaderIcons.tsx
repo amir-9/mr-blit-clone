@@ -1,5 +1,13 @@
 interface HeaderIconsProps {
-  name: string;
+  name:
+    | "ship"
+    | "taxi"
+    | "bus"
+    | "train"
+    | "travelBag"
+    | "suitcaseRolling"
+    | "hotel"
+    | "flight";
   size?: string;
   fill?: string;
   classNames?: string;
