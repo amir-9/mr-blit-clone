@@ -11,7 +11,6 @@ import useStep from "../hooks/useStep";
 import TicketModal from "../components/modals/TicketModal";
 
 const Navbar = () => {
-  const [whichVehicle, setWhichVehicle] = useState("flight");
   const [isTicketModalOpen, setIsTicketModalOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const { step, setStep } = useStep();

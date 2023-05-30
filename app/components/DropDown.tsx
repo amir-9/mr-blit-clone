@@ -1,12 +1,18 @@
 "use client";
 
+import { useStore } from "../store/store";
+import type { NavItemType, StateType } from "../types";
+
 interface DropDownProps {
-  data: Array<{ title: string; navbarIcon: any }>;
+  data: Array<NavItemType>;
 }
 
 const DropDown: React.FC<DropDownProps> = ({ data }) => {
-  const clickHandler = (e: any) => {
-    console.log(e.target.innerText);
+  // const service = useStore((state) => state.service);
+  const changeService = useStore((state) => state.changeService);
+
+  const clickHandler = (state: StateType["service"]) => {
+    changeService(state);
   };
 
   return (
@@ -26,10 +32,10 @@ const DropDown: React.FC<DropDownProps> = ({ data }) => {
       "
     >
       <ul className="w-full">
-        {data.map((item: { title: string; navbarIcon: any }, index: number) => (
+        {data.map((item, index) => (
           <li
             key={index}
-            onClick={(e) => clickHandler(e)}
+            onClick={() => clickHandler(item.state)}
             className="
               py-3
               px-3
