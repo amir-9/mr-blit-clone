@@ -2,8 +2,14 @@
 
 import Image from "next/image";
 import HeaderBgImage from "./HeaderBgImage";
+import { useStore } from "../store/store";
 
 const HeaderBg = () => {
+  const service = useStore((state) => state.service);
+  console.log(service);
+  
+
+
   return (
     <div
       className="
@@ -26,7 +32,7 @@ const HeaderBg = () => {
           relative
         "
       >
-        <HeaderBgImage item="flight" />
+        <HeaderBgImage item={service} />
         <div
           className="
             absolute

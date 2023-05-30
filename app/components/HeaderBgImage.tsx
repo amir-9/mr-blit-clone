@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { headerBgImageItems } from "@/app/constants/";
 
 interface HeaderBgImageProps {
-  item: "flight" | "train" | "bus" | "taxi" | "ship";
+  item: "flight" | "train" | "bus" | "taxi" | "ship" | "travelBag" | "hotel";
 }
+
+// TODO animations has works to do
 
 const HeaderBgImage: React.FC<HeaderBgImageProps> = ({ item }) => {
   const data = headerBgImageItems.find((i) => i.name == item);
@@ -15,11 +17,11 @@ const HeaderBgImage: React.FC<HeaderBgImageProps> = ({ item }) => {
       className="
         z-[9]
         absolute
-        bottom-[80px]
-        -right-[500px]
+        bottom-[90px]
       "
-      whileInView={{ translateX: "-790px" }}
-      transition={{ duration: 0.3 }}
+      initial={{ right: -300 }}
+      animate={{ translateX: [0, -590] }}
+      transition={{ duration: 0.15 }}
     >
       <Image
         alt={data?.name || "car"}

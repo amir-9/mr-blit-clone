@@ -8,7 +8,6 @@ interface DropDownProps {
 }
 
 const DropDown: React.FC<DropDownProps> = ({ data }) => {
-  // const service = useStore((state) => state.service);
   const changeService = useStore((state) => state.changeService);
 
   const clickHandler = (state: StateType["service"]) => {
