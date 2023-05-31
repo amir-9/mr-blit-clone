@@ -1,3 +1,6 @@
+import { JsxElement } from "typescript";
+import { ReactElement } from "react";
+
 export type StepType = "mobileOrEmail" | "password" | "confirmCode";
 export type StepStateType = {
   step: StepType;
@@ -34,6 +37,12 @@ export type StateType = {
 
 export type NavItemType = {
   title: string;
-  navbarIcon: any;
+  navbarIcon: ReactElement<any, any>;
+  state: StateType["service"];
+};
+
+export type HeaderItemType = {
+  title: string;
+  headerIcon: ReactElement<any, any>;
   state: StateType["service"];
 };

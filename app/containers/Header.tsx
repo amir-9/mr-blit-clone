@@ -2,6 +2,7 @@ import { StepProvider } from "@/app/context/StepContext";
 
 import HeaderBg from "../components/HeaderBg";
 import Navbar from "./Navbar";
+import Services from "../components/Services";
 
 const Header = () => {
   return (
@@ -18,6 +19,7 @@ const Header = () => {
       >
         <Navbar />
         <HeaderBg />
+        <Services />
       </header>
     </StepProvider>
   );

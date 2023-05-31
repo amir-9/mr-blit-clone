@@ -1,7 +1,7 @@
 import NavbarIcons from "../components/icons/NavbarIcons";
 import HeaderIcons from "../components/icons/HeaderIcons";
 
-import type { NavItemType } from "../types";
+import type { NavItemType, HeaderItemType } from "../types";
 
 export const navbarItems: Array<NavItemType> = [
   {
@@ -66,5 +66,42 @@ export const headerBgImageItems = [
     width: 399,
     height: 173,
     src: "/images/header/ship-desktop.svg",
+  },
+];
+export const headerItems: Array<HeaderItemType> = [
+  {
+    title: "هواپیما",
+    headerIcon: <HeaderIcons name="flight" fill="inherit" />,
+    state: "flight",
+  },
+  {
+    title: "هتل",
+    headerIcon: <HeaderIcons name="hotel" fill="inherit" />,
+    state: "hotel",
+  },
+  {
+    title: "بسته سفر",
+    headerIcon: <HeaderIcons name="travelBag" fill="inherit" />,
+    state: "travelBag",
+  },
+  {
+    title: "قطار",
+    headerIcon: <HeaderIcons name="train" fill="inherit" />,
+    state: "train",
+  },
+  {
+    title: "اتوبوس",
+    headerIcon: <HeaderIcons name="bus" fill="inherit" />,
+    state: "bus",
+  },
+  {
+    title: "سواری",
+    headerIcon: <HeaderIcons name="taxi" fill="inherit" />,
+    state: "taxi",
+  },
+  {
+    title: "کشتی",
+    headerIcon: <HeaderIcons name="ship" fill="inherit" />,
+    state: "ship",
   },
 ];
