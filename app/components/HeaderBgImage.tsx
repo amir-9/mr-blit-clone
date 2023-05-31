@@ -7,11 +7,12 @@ interface HeaderBgImageProps {
   item: "flight" | "train" | "bus" | "taxi" | "ship" | "travelBag" | "hotel";
 }
 
-// TODO animations has works to do
+// TODO animations needs works to do
 
 const HeaderBgImage: React.FC<HeaderBgImageProps> = ({ item }) => {
   const data = headerBgImageItems.find((i) => i.name == item);
 
+  if (!data) return <></>;
   return (
     <motion.div
       className="

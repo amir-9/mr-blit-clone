@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import HeaderBgImage from "./HeaderBgImage";
 import { useStore } from "../store/store";
 
 const HeaderBg = () => {
   const service = useStore((state) => state.service);
-  console.log(service);
+  // console.log(service);
   
 
 
