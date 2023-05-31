@@ -31,6 +31,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ data }) => {
         cursor-pointer
         rounded-2xl
         shadow-[0_1px_5px_0_rgba(0,0,0,.15)]
+        transition
       `,
         isSelected
           ? "bg-[#ffda73] text-[#705200] fill-[#705200]"
